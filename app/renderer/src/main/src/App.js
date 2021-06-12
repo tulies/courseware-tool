@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import {ipcRenderer} from 'electron'
+// const {ipcRenderer} = window.require('electron')
 
 function App() {
+  console.log(ipcRenderer)
   return (
     <div className="App">
       <header className="App-header">
