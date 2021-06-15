@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import {ipcRenderer} from 'electron'
+// import {ipcRenderer} from 'electron'
 // const {ipcRenderer} = window.require('electron')
-
+import {Button} from 'antd'
 function App() {
-  console.log(ipcRenderer)
+  // console.log(ipcRenderer)
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button>Learn React</Button>
       </header>
     </div>
   );
