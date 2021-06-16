@@ -63,7 +63,7 @@ module.exports = override(
   // )
 
   (config) => {
-    config.target = 'electron-renderer'
+    // config.target = 'electron-renderer'
 
     //暴露webpack的配置 config ,evn
     // 去掉打包生产map 文件

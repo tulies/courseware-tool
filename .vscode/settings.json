@@ -1,0 +1,25 @@
+{
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "vue",
+        "html",
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact"
+    ],
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "eslint.alwaysShowStatus": true,
+    "auto-rename-tag.activationOnLanguage": [
+        "*"
+    ],
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}/src"
+    }
+}

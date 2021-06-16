@@ -1,28 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Switch } from "react-router-dom";
+import RenderRoter from "./router/renderRouter";
+// import { useStore } from "@/store/uses";
+// import { AppContext } from "./AppContext";
 // import {ipcRenderer} from 'electron'
 // const {ipcRenderer} = window.require('electron')
-import {Button} from 'antd'
 function App() {
   // console.log(ipcRenderer)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button>Learn React</Button>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Switch>
+          {/* <Redirect path="/" to="/login/login" /> */}
+          <RenderRoter />
+        </Switch>
+      </BrowserRouter>
   );
 }
 
