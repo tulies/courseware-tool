@@ -2,17 +2,24 @@ import React from "react";
 import { Typography, Form, Input, Button, Tooltip, Space } from "antd";
 import { FolderOpenOutlined } from "@ant-design/icons";
 import styles from "./index.module.less";
+import qs from 'qs'
+import { useHistory, useLocation } from "react-router-dom";
+
+/* electron */
 import { remote } from "electron";
-import { useHistory, useParams } from "react-router-dom";
 
 // electron
 // const { re} = window.require('electron')
 export default () => {
   const history = useHistory();
-  const { isWebRouter } = useParams();
+  const location = useLocation();
+  console.log(location)
+  const { isWebRouter } = qs.parse(location.search.replace(/^\?/, ''));
+  // qs.parse(props.location.search.replace(/^\?/, ''))
+  console.log('前一跳', window.document.referrer)
   console.log("isWebRouter", isWebRouter, window.location.href);
-  function onFinish() {}
-  function onFinishFailed() {}
+  function onFinish() { }
+  function onFinishFailed() { }
   return (
     <div className={styles.setupNew}>
       <div className="above-box">
@@ -28,7 +35,7 @@ export default () => {
           <Form.Item
             label="项目路径"
             name="username"
-            // rules={[{ required: true, message: "请输入项目存放路径!" }]}
+          // rules={[{ required: true, message: "请输入项目存放路径!" }]}
           >
             <Input
               addonAfter={

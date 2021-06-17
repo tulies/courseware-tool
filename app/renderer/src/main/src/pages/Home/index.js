@@ -26,6 +26,7 @@ export default () => {
           margin: "0 auto",
         }}
       >
+
         <Typography style={{ marginBottom: 30 }}>
           <Title level={2} style={{ marginBottom: 0, color: "#555555" }}>
             Ceibs Courseware Tool
