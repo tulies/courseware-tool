@@ -2,9 +2,9 @@
 //   GatewayOutlined,
 // } from "@ant-design/icons";
 
-// import loadable from "@loadable/component";
+import loadable from "@loadable/component";
 // import { Redirect } from "react-router-dom";
-// import BlankLayout from "@/layouts/BlankLayout";
+import BlankLayout from "@/layouts/BlankLayout";
 import Home from "@/pages/Home";
 
 // export const userRoutes = () => [
@@ -31,13 +31,30 @@ export const baseRoutes = () => [
     // component: loadable(() => import("@/pages/Prj/index/index")),
     component: Home,
   },
+  {
+    name: "setup",
+    path: "/setup",
+    // component: loadable(() => import("@/pages/Prj/index/index")),
+    component: BlankLayout,
+    children: [
+      {
+        name: "new",
+        path: "/setup/new",
+        component: loadable(() => import("@/pages/Setup/New/index")),
+        exact: true,
+        meta: {
+          title: "创建课件",
+        },
+      },
+    ],
+  },
 ];
 export function getRoutes() {
   let routes = [
     // ...userRoutes(),
     {
       path: "/",
-      name: "",
+      name: "stander",
       component: Home,
       exact: true,
     },

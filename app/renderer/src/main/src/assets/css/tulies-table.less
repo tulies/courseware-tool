@@ -1,0 +1,127 @@
+.tulies-table-constainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .tulies-table-operator {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .left-operator {
+            display: flex;
+        }
+
+        .right-operator {
+            display: flex;
+        }
+
+        .ant-btn+.ant-btn {
+            margin-left: 10px;
+        }
+    }
+
+    // 搜索条件选项
+    .tulies-table-search-options {
+        // border: 1px #b3d8ff dashed;
+        // padding: 12px 12px 0 12px;
+        // margin: 5px 0 10px 0;
+        // background: #ecf5ff;
+        margin-bottom: 10px;
+        position: relative;
+
+        .ant-card-body {
+            padding: 12px 16px 0 16px;
+        }
+
+        .ant-form-item {
+            margin-bottom: 12px;
+
+            // &:last-of-type {
+            //     margin-bottom: 0;
+            // }
+        }
+
+        .tulies-table-search-float-actions {
+            position: absolute;
+            right: 24px;
+            bottom: 12px;
+            z-index: 10;
+
+
+        }
+
+
+        .ant-form-item-label>label {
+            color: #1890ff;
+            // font-weight: 500;
+        }
+
+    }
+
+    .tulies-table-bd {
+        display: flex;
+        justify-content: space-between;
+
+        .tulies-table-bd-left {
+            padding: 10px 0;
+        }
+
+        .tulies-table-bd-right {
+            padding: 10px 0;
+        }
+    }
+
+    .ml-10 {
+        margin-left: 10px;
+    }
+
+    .mr-10 {
+        margin-right: 10px;
+    }
+
+    .mb-10 {
+        margin-bottom: 10px;
+    }
+
+
+    .ant-table-cell {
+        .ant-typography {
+            margin-bottom: .3em;
+
+
+            &:last-child {
+                border-top: none;
+            }
+        }
+
+        .ant-typography+.ant-typography {
+            border-top: 1px solid #efefef;
+        }
+
+    }
+}
+
+.ant-table-row.disabled{
+    .ant-table-cell{
+        background-color: #efefef;
+        color:rgba(0,0,0,.3);
+        .ant-typography{
+            color:rgba(0,0,0,.3);
+        }
+        a.disabled{
+            color:rgba(0,0,0,.3);
+        }
+    }
+    &:hover {
+        .ant-table-cell{
+            background-color: #efefef;
+            // color:rgba(0,0,0,.3);
+            // .ant-typography{
+            //     color:rgba(0,0,0,.3);
+                
+            // }
+        }
+   }
+}
