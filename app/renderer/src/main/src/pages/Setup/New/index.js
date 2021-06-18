@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Form, Input, Button, Tooltip, Space } from "antd";
 import { FolderOpenOutlined } from "@ant-design/icons";
 import styles from "./index.module.less";
-import qs from 'qs'
+import qs from "qs";
 import { useHistory, useLocation } from "react-router-dom";
 
 /* electron */
@@ -13,13 +13,13 @@ import { remote } from "electron";
 export default () => {
   const history = useHistory();
   const location = useLocation();
-  console.log(location)
-  const { isWebRouter } = qs.parse(location.search.replace(/^\?/, ''));
+  console.log(location);
+  const { isWebRouter } = qs.parse(location.search.replace(/^\?/, ""));
   // qs.parse(props.location.search.replace(/^\?/, ''))
-  console.log('前一跳', window.document.referrer)
-  console.log("isWebRouter", isWebRouter, window.location.href);
-  function onFinish() { }
-  function onFinishFailed() { }
+  // console.log('前一跳', window.document.referrer)
+  // console.log("isWebRouter", isWebRouter, window.location.href);
+  function onFinish() {}
+  function onFinishFailed() {}
   return (
     <div className={styles.setupNew}>
       <div className="above-box">
@@ -33,9 +33,15 @@ export default () => {
           onFinishFailed={onFinishFailed}
         >
           <Form.Item
-            label="项目路径"
+            label="名称"
+            // rules={[{ required: true, message: "请输入项目存放路径!" }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="路径"
             name="username"
-          // rules={[{ required: true, message: "请输入项目存放路径!" }]}
+            // rules={[{ required: true, message: "请输入项目存放路径!" }]}
           >
             <Input
               addonAfter={
@@ -44,6 +50,13 @@ export default () => {
                 </Tooltip>
               }
             />
+          </Form.Item>
+
+          <Form.Item
+            label="介绍"
+            // rules={[{ required: true, message: "请输入项目存放路径!" }]}
+          >
+            <Input.TextArea />
           </Form.Item>
         </Form>
       </div>
